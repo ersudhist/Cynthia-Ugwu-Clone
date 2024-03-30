@@ -1,11 +1,3 @@
-// smooth scrolling
-// attach loco scroll CSS
-// attach Locomotive scroll min JS
-// some code from locomotive github for js
-// gsap
-// attach gsap cdn script tag
-
-
 var timeout;
 
 const scroll = new LocomotiveScroll({
@@ -37,10 +29,6 @@ function productDesigner() {
         ease: Expo.easeInOut,
       });
 }
-
-// jab mouse move ho to hum log skew kar paye aur maximum skew
-// and minimum skew define kar paye, jab mouse move ho to chapta
-// ki value badhe, aur jab mouse chalna band ho jaye to chapta hata lo
 
 // Function to skew the circle based on mouse movement
 function circleskew() {
@@ -81,12 +69,6 @@ function circleMouseFollower(xscale, yscale) {
     });
 }
 
-// teeno element ko select karo, uske baad teeno par ek mousemove lagao, 
-// jab mousemove ho to ye pata karo ki mouse kaha par hai, jiska matlab hai 
-// mouse ki x and y position pata karo, ab mouse ki x y position ke badle us 
-// image ko show karo and us image ko move karo, move karte waqt rotate karo, 
-// and jaise jaise mouse tez chale waise waise rotation bhi tez ho jaye
-
 // Function to handle mouse interaction with image elements
 function handleImageHover() {
     const element = document.querySelectorAll(".elem");
@@ -106,9 +88,6 @@ function handleImageHover() {
         
         // Mouse move event to show and move image
         elem.addEventListener("mousemove", function(details) {
-            //console.log(details.clientX, details.clientY);
-           // console.log(elem.getBoundingClientRect()); => Top se mouse ka distance
-           //console.log(details.clientY - elem.getBoundingClientRect().top); => elem se mouse ka distance
            var diff = details.clientY - elem.getBoundingClientRect().top;
            difference = details.clientX - rotate;
            rotate = details.clientX;
